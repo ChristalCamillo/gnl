@@ -6,7 +6,7 @@
 /*   By: chrbrune <chrbrune@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 19:02:10 by chrbrune          #+#    #+#             */
-/*   Updated: 2021/09/04 21:23:48 by chrbrune         ###   ########.fr       */
+/*   Updated: 2021/09/05 12:45:49 by chrbrune         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ static void	free_ptr(char **ptr)
 static char	*extract_line(char **save)
 {
 	int		i;
-	char	line;
-	char	temp_free;
+	char	*line;
+	char	*temp_free;
 
 	i = 0;
-	while ((*save)[i] != '/0' && (*save)[i] != '/n')
+	while ((*save)[i] != '\0' && (*save)[i] != '\n')
 		i++;
 	temp_free = *save;
 	line = ft_substr(temp_free, 0, i + 1);
